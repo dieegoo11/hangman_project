@@ -15,10 +15,14 @@ while turns < 10:
         for i in range(len(word)):
             if word[i] == guess:
                 place_holder[i] = guess
-                print(guess)
+        place_holder = ''.join(place_holder)
+        print(place_holder)
 
     else:
         print('Wrong. Try again.')
         turns += 1
+    if "_" not in place_holder:
+        print('You have been declared the king of hangman!')
+        break
     if turns == 10:
-        print('Game over')
+        print('Game over, you lost :(')
